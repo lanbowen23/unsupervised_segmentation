@@ -14,7 +14,14 @@ The dataset is in folder `DATA`.
 
 Train first step for 2000 iterations, only restrained by hints.  
 Train second step for 4000 iterations, add reconstruction loss, hint restrain relaxed after 1000 iterations.  
-Early stop with PSNR over 30.  
+Early stop with PSNR goal.  
+
+hyper-parameters:
+- psnr_goal: PSNR goal, if achieved, stop second step.  
+- output_path: result saving path.  
+- show_every: frequency for saving results, results including networks output, mask output etc.
+- first_step_iter_num, second_step_iter_num: choose total iteration times.  
+- plot_during_training: whether to show loss value during training.
 
 ---
 
